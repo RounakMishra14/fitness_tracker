@@ -1,0 +1,69 @@
+/* General styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Video and canvas styling */
+video, canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+canvas {
+    pointer-events: none;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animation for keypoints */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Keypoint and line styles */
+.red-dot {
+    fill: red;
+    animation: pulse 1s infinite;
+}
+
+.green-line {
+    stroke: lime;
+    stroke-width: 2;
+}
